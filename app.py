@@ -39,7 +39,7 @@ def dividir(num1, num2):
     resultado = num1 / num2
     return f'El resultado de la división es: {resultado}'
 
-@app.route('/mayor/<float:num1>/<float:num2>')
+@app.route('/mayor/<int:num1>/<int:num2>')
 def mayor(num1, num2):
     if num1 > num2:
         return f'El número mayor es: {num1}'
@@ -48,7 +48,7 @@ def mayor(num1, num2):
     else:
         return 'Ambos números son iguales.'
     
-@app.route('/menor/<float:num1>/<float:num2>')
+@app.route('/menor/<int:num1>/<int:num2>')
 def menor(num1, num2):
     if num1 < num2:
         return f'El número menor es: {num1}'
