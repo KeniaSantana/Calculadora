@@ -17,29 +17,29 @@ def Calculadora():
 <p>Numero de control:23308060610371</p>'''
 
     
-@app.route('/sumar/<int:num1>/<int:num2>')
+@app.route('/sumar/<float:num1>/<float:num2>')
 def sumar(num1, num2):
     resultado = num1 + num2
     return f'El resultado de la suma es: {resultado}'
 
-@app.route('/restar/<int:num1>/<int:num2>')
+@app.route('/restar/<float:num1>/<float:num2>')
 def restar(num1, num2):
     resultado = num1 - num2
     return f'El resultado de la resta es: {resultado}'
 
-@app.route('/multiplicar/<int:num1>/<int:num2>')
+@app.route('/multiplicar/<float:num1>/<float:num2>')
 def multiplicar(num1, num2):
     resultado = num1 * num2
     return f'El resultado de la multiplicación es: {resultado}'
 
-@app.route('/dividir/<int:num1>/<int:num2>')
+@app.route('/dividir/<float:num1>/<float:num2>')
 def dividir(num1, num2):
     if num2 == 0:
         return 'Error: División por cero no está permitida.'
     resultado = num1 / num2
     return f'El resultado de la división es: {resultado}'
 
-@app.route('/mayor/<int:num1>/<int:num2>')
+@app.route('/mayor/<float:num1>/<float:num2>')
 def mayor(num1, num2):
     if num1 > num2:
         return f'El número mayor es: {num1}'
@@ -48,7 +48,7 @@ def mayor(num1, num2):
     else:
         return 'Ambos números son iguales.'
     
-@app.route('/menor/<int:num1>/<int:num2>')
+@app.route('/menor/<float:num1>/<float:num2>')
 def menor(num1, num2):
     if num1 < num2:
         return f'El número menor es: {num1}'
