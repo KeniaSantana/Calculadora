@@ -22,7 +22,7 @@ def sumar(num1, num2):
     resultado = num1 + num2
     return f'El resultado de la suma es: {resultado}'
 
-@app.route('/restar/<float:num1>/<float:num2>')
+@app.route('/resta/<float:num1>/<float:num2>')
 def restar(num1, num2):
     resultado = num1 - num2
     return f'El resultado de la resta es: {resultado}'
